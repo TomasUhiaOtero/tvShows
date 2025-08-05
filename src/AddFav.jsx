@@ -1,7 +1,8 @@
-const AddFav = () => {
+const AddFav = ({addToFavs, item}) => {
     return (
         <div>
-            <button className="btn btn-primary mt-2 mb-5">Añadir Fav</button>
+            <button className="btn btn-primary mt-2 mb-5" 
+            onClick={() => addToFavs(item)}>Añadir Fav</button>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Show from "./Show";
 
-const ListShow = ({search}) => {
+const ListShow = ({search, addToFavs}) => {
 
     const [list, setList] = useState([])
 
@@ -18,7 +18,7 @@ const ListShow = ({search}) => {
     return (
         <div className="text-center">
             {list.length > 0 ?
-            list.map((item) => <Show item={item}/>)
+            list.map((item) => <Show item={item} addToFavs={addToFavs}/>)
             : 
             <p className="tex-center">No hay imagen disponible</p>
             }
