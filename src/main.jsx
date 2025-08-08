@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './Home';
+import { ShowsProvider } from './hooks/useGlobalShows';
 
 
 const Main = () => {
     return (
-        <React.StrictMode>  
-           <Home />
+        <React.StrictMode>
+            <ShowsProvider>
+                <Home />
+            </ShowsProvider>
         </React.StrictMode>
     );
 }
